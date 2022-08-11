@@ -41,7 +41,9 @@ struct Hello_stepData: StepData {
     // Add non-static members of type XMessage here for all messages.
     // Only non-static members will be collected for the overview!
     
-    public let sayingHello = Message(id: "saying hello", type: .Info, info: [
-        .en: "saying hello to $1"
-    ])
+    public let sayingHello = Message(id: "saying hello", type: .Info,
+        fact: [
+            .en: "saying hello to $1"
+        ]
+    )
 }

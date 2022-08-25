@@ -6,6 +6,7 @@ import WorkflowExampleData
 /**
  The public interface to the step.
  */
+@available(macOS 10.15.0, *)
 public func hello_lib(
     during execution: Execution,
     data: MyData
@@ -16,6 +17,7 @@ public func hello_lib(
 /**
  The step.
  */
+@available(macOS 10.15.0, *)
 func hello_step(
     during execution: Execution,
     usingExecutionDatabase executionDatabase: ExecutionDatabase,

@@ -9,8 +9,8 @@ import WorkflowExampleData
 public func hello_lib(
     during execution: Execution,
     data: MyData
-) async {
-    await hello_step(during: execution, usingExecutionDatabase: ExecutionDatabase(), data: data)
+) {
+    hello_step(during: execution, usingExecutionDatabase: ExecutionDatabase(), data: data)
 }
 
 /**
@@ -20,10 +20,10 @@ func hello_step(
     during execution: Execution,
     usingExecutionDatabase executionDatabase: ExecutionDatabase,
     data: MyData
-) async {
-    await execution.effectuate(executionDatabase, #function) {
+) {
+    execution.effectuate(executionDatabase, #function) {
         
-        await execution.log(stepData.sayingHello, data.value)
+        execution.log(stepData.sayingHello, data.value)
         print("Hello \(data.value)!")
         
     }
